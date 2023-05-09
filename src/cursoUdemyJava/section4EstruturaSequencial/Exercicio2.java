@@ -22,6 +22,9 @@ public class Exercicio2 {
 
     System.out.printf("A=%.4f%n", area);
 
+    boolean test = sc.hasNext();
+    System.out.println(test);
+
     sc.close();
   }
 
