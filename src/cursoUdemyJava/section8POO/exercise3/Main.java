@@ -25,6 +25,8 @@ public class Main {
     student.setTerceiroTri(terceiraMedia);
     System.out.println(student);
 
+    sc.close();
+
   }
 
 }
