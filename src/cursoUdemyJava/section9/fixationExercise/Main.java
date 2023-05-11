@@ -40,44 +40,38 @@ public class Main {
       double deposito = sc.nextDouble();
       Conta conta = new Conta(numeroDaConta, nomeTitular, deposito);
       System.out.println("Account data:");
-      System.out.println("Account " + conta.getNumeroDaConta() + " Holder " + conta.getNomeTitular()
-          + " Balance: $" + conta.getSaldo());
+      System.out.println(conta);
 
       System.out.print("Enteder a deposit value: ");
       deposito = sc.nextDouble();
       conta.deposito(deposito);
 
       System.out.println("Updated account data: ");
-      System.out.println("Account " + conta.getNumeroDaConta() + " Holder " + conta.getNomeTitular()
-          + " Balance: $" + conta.getSaldo());
+      System.out.println(conta);
 
       System.out.print("Enter a withdraw value: ");
       double saque = sc.nextDouble();
       conta.saque(saque);
       System.out.println("Updated account data: ");
-      System.out.println("Account " + conta.getNumeroDaConta() + " Holder " + conta.getNomeTitular()
-          + " Balance: $" + conta.getSaldo());
+      System.out.println(conta);
 
     } else {
       Conta conta = new Conta(numeroDaConta, nomeTitular);
       System.out.println("Account data:");
-      System.out.println("Account " + conta.getNumeroDaConta() + " Holder " + conta.getNomeTitular()
-          + " Balance: $" + conta.getSaldo());
+      System.out.println(conta);
 
       System.out.print("Enteder a deposit value: ");
       double deposito = sc.nextDouble();
       conta.deposito(deposito);
 
       System.out.println("Updated account data: ");
-      System.out.println("Account " + conta.getNumeroDaConta() + " Holder " + conta.getNomeTitular()
-          + " Balance: $" + conta.getSaldo());
+      System.out.println(conta);
 
       System.out.print("Enter a withdraw value: ");
       double saque = sc.nextDouble();
       conta.saque(saque);
       System.out.println("Updated account data: ");
-      System.out.println("Account " + conta.getNumeroDaConta() + " Holder " + conta.getNomeTitular()
-          + " Balance: $" + conta.getSaldo());
+      System.out.println(conta);
 
     }
 

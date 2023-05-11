@@ -41,4 +41,9 @@ public class Conta {
     this.saldo -= (valor + 5.00);
   }
 
+  public String toString() {
+    return "Account " + this.getNumeroDaConta() + " Holder " + this.getNomeTitular() + " Balance: $"
+        + this.getSaldo();
+  }
+
 }
