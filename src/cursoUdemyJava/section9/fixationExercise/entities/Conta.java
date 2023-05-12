@@ -14,7 +14,7 @@ public class Conta {
   public Conta(String numeroDaConta, String nomeTitular, double saldo) {
     this.numeroDaConta = numeroDaConta;
     this.nomeTitular = nomeTitular;
-    this.saldo = saldo;
+    deposito(saldo);
   }
 
   public String getNomeTitular() {
@@ -39,6 +39,11 @@ public class Conta {
 
   public void saque(double valor) {
     this.saldo -= (valor + 5.00);
+  }
+
+  public String toString() {
+    return "Account " + this.getNumeroDaConta() + " Holder " + this.getNomeTitular() + " Balance: $"
+        + this.getSaldo();
   }
 
 }
