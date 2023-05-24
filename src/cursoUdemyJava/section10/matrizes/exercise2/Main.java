@@ -32,8 +32,6 @@ public class Main {
     System.out.println();
     System.out.println("SOMA: " + sum);
     System.out.println("MEDIA: " + average);
-
-
     sc.close();
 
   }
