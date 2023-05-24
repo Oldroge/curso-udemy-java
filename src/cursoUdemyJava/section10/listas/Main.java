@@ -38,6 +38,7 @@ public class Main {
         funcLista.stream().filter(funcionarios -> funcionarios.getId() == idSalaryToIncrease)
             .collect(Collectors.toList());
 
+
     if (getById.size() == 0) {
       System.out.println("This id does not exist!");
       System.out.println();
