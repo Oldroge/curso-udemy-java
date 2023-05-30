@@ -9,6 +9,17 @@ public class Order {
   private Client client;
   private OrderItem items;
 
+
+  public Order() {}
+
+
+  public Order(LocalDate moment, OrderStatus status, Client client, OrderItem items) {
+    this.moment = moment;
+    this.status = status;
+    this.client = client;
+    this.items = items;
+  }
+
   public LocalDate getMoment() {
     return moment;
   }
