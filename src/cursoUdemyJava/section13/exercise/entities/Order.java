@@ -13,11 +13,10 @@ public class Order {
   public Order() {}
 
 
-  public Order(LocalDate moment, OrderStatus status, Client client, OrderItem items) {
+  public Order(LocalDate moment, OrderStatus status, Client client) {
     this.moment = moment;
     this.status = status;
     this.client = client;
-    this.items = items;
   }
 
   public LocalDate getMoment() {
