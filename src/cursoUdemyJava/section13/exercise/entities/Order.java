@@ -1,13 +1,15 @@
 package cursoUdemyJava.section13.exercise.entities;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import cursoUdemyJava.section13.exercise.entities.utils.OrderStatus;
 
 public class Order {
   private LocalDate moment;
   private OrderStatus status;
   private Client client;
-  private OrderItem items;
+  private List<OrderItem> items = new ArrayList<>();
 
 
   public Order() {}
@@ -43,14 +45,23 @@ public class Order {
     this.client = client;
   }
 
-  public OrderItem getItems() {
+  public List<OrderItem> getItems() {
     return items;
   }
 
-  public void setItems(OrderItem items) {
-    this.items = items;
+  public void addItem(OrderItem item) {
+    this.items.add(item);
   }
 
+  public void removeItem(OrderItem item) {
+    this.items.remove(item);
+  }
 
-
+  public double total() {
+    double sum = 0;
+    for (OrderItem item : this.items) {
+      sum += item.subTotal();
+    }
+    return sum;
+  }
 }
