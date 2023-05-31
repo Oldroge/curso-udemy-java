@@ -27,7 +27,7 @@ public class Product {
     this.price = price;
   }
 
-  public double priceTag() {
-    return this.price;
+  public String priceTag() {
+    return "$ " + this.price;
   }
 }
