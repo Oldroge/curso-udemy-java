@@ -1,5 +1,6 @@
 package cursoUdemyJava.section14.exercise.entities;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 public class UsedProduct extends Product {
@@ -9,8 +10,8 @@ public class UsedProduct extends Product {
     super();
   }
 
-  public UsedProduct(String name, double price, LocalDate manufactureDate) {
-    super(name, price);
+  public UsedProduct(String name, double price, LocalDate manufactureDate, DecimalFormat df) {
+    super(name, price, df);
     this.manufactureDate = manufactureDate;
   }
 
@@ -25,7 +26,8 @@ public class UsedProduct extends Product {
 
   @Override
   public String priceTag() {
-    return "(used) $ " + super.getPrice() + "(Manufacture date: " + this.manufactureDate;
+    return "(used) $ " + getDf().format(super.getPrice()) + " (Manufacture date: "
+        + this.manufactureDate + ")";
   }
 
 }

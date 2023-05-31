@@ -1,5 +1,7 @@
 package cursoUdemyJava.section14.exercise.entities;
 
+import java.text.DecimalFormat;
+
 public class ImportedProduct extends Product {
   private double customsFee;
 
@@ -7,8 +9,8 @@ public class ImportedProduct extends Product {
     super();
   }
 
-  public ImportedProduct(String name, double price, double customsFee) {
-    super(name, price);
+  public ImportedProduct(String name, double price, double customsFee, DecimalFormat df) {
+    super(name, price, df);
     this.customsFee = customsFee;
   }
 
@@ -26,7 +28,8 @@ public class ImportedProduct extends Product {
 
   @Override
   public String priceTag() {
-    return "$ " + this.totalPrice() + "(Customs fee: $" + this.customsFee + ")";
+    return "$ " + super.getDf().format(this.totalPrice()) + "(Customs fee: $" + this.customsFee
+        + ")";
   }
 
 }
